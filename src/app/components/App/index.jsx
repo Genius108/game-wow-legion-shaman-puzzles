@@ -18,7 +18,7 @@ const App = React.createClass({
         return <div className="layout">
             <AppBar
                 iconElementLeft={<IconButton onClick={() => optionsDisplay(true)}><SettingsIcon /></IconButton>}
-                title="Title"
+                title="Totems"
             />
             <Options />
             <div className="layout-content">

@@ -12,8 +12,14 @@ function isExists(totems, x, y) {
     return y >= 0 && y < totems.length && x >=0 && x < totems[y].length;
 }
 
+const easyFitness = [20, 22];
+
 function getFitness(hash) {
-    return hash.replace(/1/g,'').length / hash.length;
+    const result = hash.replace(/1/g,'').length / hash.length;
+    if (easyFitness.includes(result)) {
+        return 0.999;
+    }
+    return result;
 }
 
 function flipTotem(totems, x, y) {

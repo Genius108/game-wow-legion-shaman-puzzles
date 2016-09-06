@@ -14,7 +14,7 @@ const TurnList = React.createClass({
         if (blockInput) return;
 
         const {maxPopulationSize, maxGenerations} = options;
-        const worker = new Worker('/code/game-wow-legion-shaman-puzzles/breeder.js');
+        const worker = new Worker('breeder.js');
         globalBlockInput(true);
         resolverStart(true);
         worker.addEventListener('message', function(e) {
@@ -58,7 +58,7 @@ const TurnList = React.createClass({
                 clearInterval(timerId);
                 globalBlockInput(false);
             }
-        }, 500);
+        }, 1000);
     },
     render() {
         const {resolver, blockInput} = this.props;
