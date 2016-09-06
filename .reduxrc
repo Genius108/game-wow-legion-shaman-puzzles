@@ -1,0 +1,7 @@
+{
+  "useCamelCasedPaths": false,
+  "actionsPath": "./src/app/actions",
+  "reducersPath": "./src/app/reducers",
+  "typesPath": "./src/app/types",
+  "statesPath": "./src/app/states"
+}
